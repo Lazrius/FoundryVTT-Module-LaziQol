@@ -1,16 +1,19 @@
 import Logger from "./Utils/Logger";
 import PreloadTemplates from "./PreloadTemplates";
 import { RegisterSettings } from "./Utils/Settings";
+import { ApplyActiveEffect } from "./Hooks/ApplyActiveEffect";
+import {RenderActorSheet} from "./Hooks/RenderActorSheet";
 
 Hooks.once("init", async () => {
 	RegisterSettings();
 	await PreloadTemplates();
-});
 
-Hooks.once("setup", () => {
-	Logger.Log("Template module is being setup.")
+	// Taken from TidySheet5E
+	Hooks.on("applyActiveEffect", ApplyActiveEffect);
 });
 
 Hooks.once("ready", () => {
-	Logger.Ok("Template module is now ready.");
+	Logger.Ok("Module is now ready.");
 });
+
+Hooks.on("renderActorSheet", RenderActorSheet);

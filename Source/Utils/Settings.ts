@@ -6,14 +6,13 @@ class Settings {
 		Logger.Ok("Loading configuration settings.")
 		this.SettingsList = [
 			// Add settings items here
-			[ValidSetting.CoolDm, {
-				name: "Is the DM Cool?",
-				scope: "world", // or client
+			[ValidSetting.PreparedSpellCountInSheet, {
+				name: "List Prepared Spell Count",
+				scope: "client", // or client
 				type: Boolean,
-				hint: "Really think about it... is the DM cool?",
+				hint: "Modifies the actor sheet to list the current prepared spell out of their total capacity.",
 				config: true, // It should appear in the configuration menu
-				default: false, // The DM is NOT cool by default
-				onChange: val => Logger.Ok("It has been deemed that the DM is " + (val ? "" : "NOT ") + "cool!"),
+				default: true,
 			}]
 		];
 	}
@@ -48,7 +47,7 @@ class Settings {
 export const RegisterSettings = (): void => Settings.Get().RegisterSettings();
 
 export enum ValidSetting {
-	CoolDm = "coolDm"
+	PreparedSpellCountInSheet = "PreparedSpellCountInSheet"
 }
 
 export const GetSetting = <T>(setting: ValidSetting): T | null => {
