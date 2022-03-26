@@ -3,6 +3,8 @@ import PreloadTemplates from "./PreloadTemplates";
 import { RegisterSettings } from "./Utils/Settings";
 import { ApplyActiveEffect } from "./Hooks/ApplyActiveEffect";
 import {RenderActorSheet} from "./Hooks/RenderActorSheet";
+import {PlayerRest} from "./Hooks/PlayerRest";
+import {RenderDialog} from "./Hooks/RenderDialog";
 
 Hooks.once("init", async () => {
 	RegisterSettings();
@@ -17,3 +19,5 @@ Hooks.once("ready", () => {
 });
 
 Hooks.on("renderActorSheet", RenderActorSheet);
+Hooks.on("renderDialog", RenderDialog);
+Hooks.on('restCompleted', PlayerRest.OnPlayerRestCompleted);

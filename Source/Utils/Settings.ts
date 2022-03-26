@@ -8,12 +8,20 @@ class Settings {
 			// Add settings items here
 			[ValidSetting.PreparedSpellCountInSheet, {
 				name: "List Prepared Spell Count",
-				scope: "client", // or client
+				scope: "world",
 				type: Boolean,
 				hint: "Modifies the actor sheet to list the current prepared spell out of their total capacity.",
-				config: true, // It should appear in the configuration menu
+				config: true,
 				default: true,
-			}]
+			}],
+			[ValidSetting.ResetPreparedSpellCountOnLongRest, {
+				name: "Show reset prepared spells in LR Dialog",
+				scope: "world",
+				type: Boolean,
+				hint: "Shows an option that allows prepared spells to be completely reset upon a long rest.",
+				config: true,
+				default: true,
+			}],
 		];
 	}
 
@@ -47,7 +55,8 @@ class Settings {
 export const RegisterSettings = (): void => Settings.Get().RegisterSettings();
 
 export enum ValidSetting {
-	PreparedSpellCountInSheet = "PreparedSpellCountInSheet"
+	PreparedSpellCountInSheet = "PreparedSpellCountInSheet",
+	ResetPreparedSpellCountOnLongRest = "ResetPreparedSpellCountOnLongRest",
 }
 
 export const GetSetting = <T>(setting: ValidSetting): T | null => {
