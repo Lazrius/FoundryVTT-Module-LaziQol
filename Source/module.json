@@ -16,7 +16,7 @@
 	],
 	"minimumCoreVersion": "0.8.8",
 	"compatibleCoreVersion": "9",
-	"url": "https://github.com/Lazrius/FoundryVTT-Typescript-Module-Template",
-	"manifest": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Typescript-Module-Template/master/Source/module.json",
-	"download": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Typescript-Module-Template/v1.0.1/dist/lazri-qol-v1.0.1.zip"
+	"url": "https://github.com/Lazrius/FoundryVTT-Module-LaziQol",
+	"manifest": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Module-LaziQol/master/Source/module.json",
+	"download": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Module-LaziQol/v1.0.1/dist/lazri-qol-v1.0.1.zip"
 }
