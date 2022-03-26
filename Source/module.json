@@ -2,21 +2,21 @@
 	"name": "lazri-qol",
 	"title": "Lazrius' Quality of Life Features",
 	"description": "",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Laz#9427",
 	"scripts": ["bundle.js"],
 	"styles": ["lazri-qol.css"],
 	"languages": [],
-    "dependencies": [
-        {
-            "name": "dae",
-            "type": "module",
-            "manifest": "https://gitlab.com/tposney/dae/raw/master/package/module.json"
-        }
-    ],
+	"dependencies": [
+		{
+			"name": "dae",
+			"type": "module",
+			"manifest": "https://gitlab.com/tposney/dae/raw/master/package/module.json"
+		}
+	],
 	"minimumCoreVersion": "0.8.8",
 	"compatibleCoreVersion": "9",
 	"url": "https://github.com/Lazrius/FoundryVTT-Typescript-Module-Template",
 	"manifest": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Typescript-Module-Template/master/Source/module.json",
-	"download": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Typescript-Module-Template/master/Package/lazrius-foundry-template-v1.0.0.zip"
+	"download": "https://raw.githubusercontent.com/Lazrius/FoundryVTT-Typescript-Module-Template/v1.0.1/dist/lazri-qol-v1.0.1.zip"
 }
