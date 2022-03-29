@@ -22,6 +22,14 @@ class Settings {
 				config: true,
 				default: true,
 			}],
+			[ValidSetting.EnforcePreparedSpellCap, {
+				name: "Enforce Prepared Spell Cap",
+				scope: "world",
+				type: Boolean,
+				hint: "Prevents someone from preparing spells beyond their cap.",
+				config: true,
+				default: true,
+			}],
 		];
 	}
 
@@ -57,6 +65,7 @@ export const RegisterSettings = (): void => Settings.Get().RegisterSettings();
 export enum ValidSetting {
 	PreparedSpellCountInSheet = "PreparedSpellCountInSheet",
 	ResetPreparedSpellCountOnLongRest = "ResetPreparedSpellCountOnLongRest",
+	EnforcePreparedSpellCap = "EnforcePreparedSpellCap"
 }
 
 export const GetSetting = <T>(setting: ValidSetting): T | null => {
